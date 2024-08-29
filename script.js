@@ -54,14 +54,14 @@ let historiaFinal ="";
 
  function mostraPergunta(){
      if (atual >= perguntas.length){
-         mostraResultado ();
+         mostraResultado();
          return;
      }
      perguntaAtual = perguntas[atual]; 
      caixaPerguntas.textContent = perguntaAtual.enunciado; 
      caixaAlternativas.textContent = ""; 
      textoResultado.textContent =""; 
-     mostraAlternativas ();
+     mostraAlternativas();
     }
 
  function mostraAlternativas (){
@@ -73,10 +73,10 @@ let historiaFinal ="";
 } 
 }
  function respostaSelecionada (opcaoSelecionada){
-     const afirmacao = opcaoselecionada.afirmacao; 
+     const afirmacao = opcaoSelecionada.afirmacao; 
      historiaFinal += afirmacao + " ";
      atual++ 
-     mostraPergunta ();
+     mostraPergunta();
  }
  function mostraResultado () {
     caixaPerguntas.textContent = "Resumindo..."; 
